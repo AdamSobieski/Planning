@@ -30,7 +30,7 @@ public predicate bool P1[Agent x, Widget y];
 
 How might predicates be represented in .NET assemblies or Java JARs? With respect to assemblies, one might explore how C# 14's [_extension members_](https://devblogs.microsoft.com/dotnet/csharp-exploring-extension-members/) are represented.
 
-While the eventual syntax may vary, the concept here is that predicates can be considered as being extension properties on a system-provided `State` type.
+The concept here is that predicates can be considered as being extension properties on a system-provided `State` type.
 
 ```
 public static class Extension
