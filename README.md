@@ -133,7 +133,7 @@ public static void R(this State state, Agent a1, Agent a2, Widget w1, Widget w2)
     state.P2[a2, w2] = true;
 }
 ```
-or
+or:
 ```
 public static class Compositions
 {
