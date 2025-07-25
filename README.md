@@ -46,6 +46,14 @@ public predicate bool P2[this State state, Agent x, Widget y]
 }
 ```
 
+### Numerical Fluents
+
+Similarly, numerical fluents can be defined by replacing `bool` with a numerical type, e.g., `float`.
+
+```
+public predicate float P3[Agent x, Widget y];
+```
+
 ### Actions
 
 Another key ingredient of planning domains is actions. Actions can have preconditions and effects.
