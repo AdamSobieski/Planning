@@ -26,7 +26,7 @@ Another key ingredient of planning domains is predicates. Considering a C#-style
 public predicate bool P1[Agent x, Widget y];
 ```
 
-Exploring how predicates might be represented in .NET assemblies or Java JARs, one might base a syntax on the concept of C# 14's [_extension members_](https://devblogs.microsoft.com/dotnet/csharp-exploring-extension-members/):
+Exploring how predicates might be represented in .NET assemblies or Java JARs, one might base a syntax on the concept of C# 14's [_extension members_](https://devblogs.microsoft.com/dotnet/csharp-exploring-extension-members/). While the resultant syntax may vary, the concept here is that predicates can be considered as being extension properties on a system-provided `State` type.
 
 ```
 public predicate bool P2[this State state, Agent x, Widget y]
