@@ -6,7 +6,7 @@ Advantages of representing planning domains and problems in either assemblies or
 
 ### Types
 
-One key ingredient of modeled planning domains is types. While, in C#, types can have methods, fields, and properties, for modeling planning domains in a C#-inspired syntax, we might consider that types would have [_invariants_](https://en.wikipedia.org/wiki/Invariant_(mathematics)#Invariants_in_computer_science).
+A key ingredient of modeled planning domains are types. While, in C#, types can have methods, fields, and properties, for modeling planning domains in a C#-inspired syntax, we might consider that types would have [_invariants_](https://en.wikipedia.org/wiki/Invariant_(mathematics)#Invariants_in_computer_science).
 
 ```
 public class Widget(Table t) extends Object()
@@ -20,7 +20,7 @@ public class Widget(Table t) extends Object()
 
 ### Predicates
 
-Another key ingredient of planning domains is predicates. Considering a C#-styled language, one might consider allowing modelers to define predicates using syntax resembling:
+Another key ingredient of planning domains are predicates. Considering a C#-styled language, one might consider allowing modelers to define predicates using syntax resembling:
 
 ```
 public predicate bool P1[Agent x, Widget y];
@@ -56,10 +56,12 @@ public predicate float P3[Agent x, Widget y];
 
 ### Actions
 
-Another key ingredient of planning domains is actions. Actions can have preconditions and effects.
+Another key ingredient of planning domains are actions. Actions can have preconditions and effects.
+
+A preliminary concept for representing an action in a .NET assembly or Java JAR resembles:
 
 ```
-public action A(Agent x, Widget y) extends B(x, y)
+public action A(this State state, Agent x, Widget y) extends B(x, y)
 {
     preconditions
     {
