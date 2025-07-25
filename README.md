@@ -70,6 +70,17 @@ Similarly, numerical fluents can be defined by replacing `bool` with a numerical
 public predicate float P3[Agent x, Widget y];
 ```
 
+### Object Fluents
+
+Similarly, object fluents can be defined by replacing `bool` with an object type.
+
+```
+public predicate object P4[Agent x, Widget y];
+```
+```
+public predicate Gizmo P5[Agent x, Widget y];
+```
+
 ### Actions
 
 Another key ingredient of planning domains are actions. Actions have preconditions and effects.
