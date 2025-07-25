@@ -44,17 +44,17 @@ public static class Predicates
         {
             get
             {
-                return state.Get<bool>(Predicate.GetCurrentPredicate(), x, y);
+                return state.Get<bool>(PredicateInfo.GetCurrentPredicate(), x, y);
             }
             set
             {
                 if(value.HasValue)
                 {
-                    state.Set<bool>(Predicate.GetCurrentPredicate(), value.Value, x, y);
+                    state.Set<bool>(PredicateInfo.GetCurrentPredicate(), value.Value, x, y);
                 }
                 else
                 {
-                    state.Undefine(Predicate.GetCurrentPredicate(), x, y);
+                    state.Undefine(PredicateInfo.GetCurrentPredicate(), x, y);
                 }
             }
         }
