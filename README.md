@@ -64,7 +64,7 @@ public static class Predicates
 
 ### Numerical Functions
 
-Similarly, numerical fluents can be defined by replacing `bool` with a numerical type, e.g., `int` or `float`.
+Similarly, numerical functions can be defined by replacing `bool` with a numerical type, e.g., `int` or `float`.
 
 ```
 public predicate int P3[Agent x, Widget y];
@@ -75,7 +75,7 @@ public predicate float P4[Agent x, Widget y];
 
 ### Object Functions
 
-Similarly, object fluents can be defined by replacing `bool` with an object type.
+Similarly, object functions can be defined by replacing `bool` with an object type.
 
 ```
 public predicate object P5[Agent x, Widget y];
