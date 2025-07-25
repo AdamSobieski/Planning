@@ -39,7 +39,7 @@ public predicate bool? P2[this State state, Agent x, Widget y]
     {
         if(value != null)
         {
-           state.Set<bool>(Predicate.GetCurrentPredicate(), value, x, y);
+            state.Set<bool>(Predicate.GetCurrentPredicate(), value, x, y);
         }
         else
         {
