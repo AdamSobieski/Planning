@@ -10,7 +10,7 @@ How should planning domain and problem definitions best be represented in .NET a
 
 ### Types
 
-A key ingredient of modeled planning domains are types. Types could define [_invariants_](https://en.wikipedia.org/wiki/Invariant_(mathematics)#Invariants_in_computer_science).
+A key ingredient of modeled planning domains are types. Types could define [invariants](https://en.wikipedia.org/wiki/Invariant_(mathematics)#Invariants_in_computer_science).
 
 ```
 public class Widget(Table table) : Object(), MultipleInheritance()
