@@ -11,10 +11,13 @@ How should planning domain and problem definitions be represented in .NET assemb
 A key ingredient of modeled planning domains are types. Types could have [_invariants_](https://en.wikipedia.org/wiki/Invariant_(mathematics)#Invariants_in_computer_science).
 
 ```
-public class Widget(Table table) extends Object()
+public class Widget(Table table) : Object(), MultipleInheritance()
 {
-    invariant(State state)
+    public void Invariant(State state)
     {
+        Object.Invariant(state);
+        MultipleInheritance.Invariant(state);
+
         System.Diagnostics.Debug.Assert(state.Atop[this, table]);
     }
 }
@@ -70,15 +73,21 @@ public predicate float P3[Agent x, Widget y];
 Another key ingredient of planning domains are actions. Actions have preconditions and effects.
 
 ```
-public action A(this State state, Agent x, Widget y) extends B(state, x, y)
+public action A(Agent x, Widget y) : B(x, y), C(x, y)
 {
-    preconditions
+    public void Preconditions(State state)
     {
+        B(x, y).Preconditions(state);
+        C(x, y).Preconditions(state);
+
         System.Diagnostics.Debug.Assert(state.P1[x, y]);
     }
 
-    effects
+    public void Effects(State state)
     {
+        B(x, y).Effects(state);
+        C(x, y).Effects(state);
+
         state.P1[x, y] = null;
         state.P2[x, y] = true;
     }
