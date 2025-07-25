@@ -3,3 +3,31 @@
 New techniques for modeling planning domains and problems could be explored such that these new techniques and representations could transpile to existing formats such as [PDDL](https://en.wikipedia.org/wiki/PDDL). Transpiling to PDDL could occur from [source code](https://en.wikipedia.org/wiki/Source_code), [abstract-syntax trees](https://en.wikipedia.org/wiki/Abstract_syntax_tree), [.NET](https://en.wikipedia.org/wiki/.NET_Framework) [assemblies](https://en.wikipedia.org/wiki/Assembly_(CLI)), or [Java](https://en.wikipedia.org/wiki/Java_(programming_language)) [JARs](https://en.wikipedia.org/wiki/JAR_(file_format)).
 
 Advantages of representing planning domains and problems in assemblies or JARs include that multiple languages could be compiled to these while PDDL would be one key language to be decompiled from these.
+
+## Predicates
+
+One key ingredient of planning domains is predicates. Considering a C#-styled language, one might consider allowing modelers to define predicates using syntax resembling:
+
+```
+public predicate bool P1(Agent x, Widget y);
+```
+
+Also, for more expressiveness and customizability, one might consider that predicates can be viewed as being _extension properties_ on states:
+
+```
+public predicate bool P2(this State state, Agent x, Widget y)
+{
+    get
+    {
+        return state.Get<bool>(Predicate.GetCurrentPredicate(), x, y);
+    }
+    set
+    {
+        state.Set<bool>(Predicate.GetCurrentPredicate(), value, x, y);
+    }
+    undefine
+    {
+        state.Undefine(Predicate.GetCurrentPredicate(), x, y);
+    }
+}
+```
