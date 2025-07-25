@@ -11,11 +11,11 @@ How should planning domain and problem definitions be represented in .NET assemb
 A key ingredient of modeled planning domains are types. Types could have [_invariants_](https://en.wikipedia.org/wiki/Invariant_(mathematics)#Invariants_in_computer_science).
 
 ```
-public class Widget(Table t) extends Object()
+public class Widget(Table table) extends Object()
 {
     invariant(State state)
     {
-        System.Diagnostics.Debug.Assert(state.Atop[this, t]);
+        System.Diagnostics.Debug.Assert(state.Atop[this, table]);
     }
 }
 ```
