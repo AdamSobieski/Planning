@@ -6,7 +6,7 @@ Advantages of representing planning domains and problems in either assemblies or
 
 ### Types
 
-One key ingredient of modeled planning domains is types. While in C#, types have methods and properties, for planning domains, we might consider that a type can have an [_invariant_](https://en.wikipedia.org/wiki/Invariant_(mathematics)#Invariants_in_computer_science).
+One key ingredient of modeled planning domains is types. While, in C#, types have methods and properties, for modeling planning domains in a C#-inspired syntax, we might consider that types could have [_invariants_](https://en.wikipedia.org/wiki/Invariant_(mathematics)#Invariants_in_computer_science).
 
 ```
 public class Widget(Table t) extends Object()
@@ -26,7 +26,7 @@ Another key ingredient of planning domains is predicates. Considering a C#-style
 public predicate bool P1(Agent x, Widget y);
 ```
 
-Also, for more expressiveness and customizability, one might consider that predicates can be viewed as being _extension properties_ on states:
+Exploring how predicates might be represented in .NET assemblies or Java JARs, one might consider:
 
 ```
 public predicate bool P2(this State state, Agent x, Widget y)
