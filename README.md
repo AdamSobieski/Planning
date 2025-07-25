@@ -4,7 +4,7 @@ New techniques for modeling planning domains and problems can be explored such t
 
 Advantages of representing planning domains and problems in .NET assemblies or Java JARs include that multiple languages could be compiled to these formats while PDDL would be one key language to be decompiled from these.
 
-Of these many new languages which could be compiled to a .NET assembly or Java JAR, one is sketched below, inspired by C#.
+How should planning domain and problem definitions be represented in .NET assemblies and Java JARs?
 
 ### Types
 
