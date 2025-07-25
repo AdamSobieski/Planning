@@ -33,7 +33,7 @@ Another key ingredient of planning domains are predicates. Considering a C#-styl
 public predicate bool P1[Agent x, Widget y];
 ```
 
-A concept here, regardless of syntax, is that predicates can be considered as being [extension members](https://devblogs.microsoft.com/dotnet/csharp-exploring-extension-members/) of a provided type: `State`.
+A concept here is that predicates can be considered as being [extension members](https://devblogs.microsoft.com/dotnet/csharp-exploring-extension-members/) of a provided type: `State`.
 
 ```
 public static class Predicates
