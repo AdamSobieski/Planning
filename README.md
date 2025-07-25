@@ -51,6 +51,34 @@ public predicate bool? P2[this State state, Agent x, Widget y]
 }
 ```
 
+This might also resemble something like:
+```
+public static class PredicateExtensions
+{
+    extension(State state)
+    {
+        public bool? P2[Agent x, Widget y]
+        {
+            get
+            {
+                return state.Get<bool>(Predicate.GetCurrentPredicate(), x, y);
+            }
+            set
+            {
+                if(value != null)
+                {
+                    state.Set<bool>(Predicate.GetCurrentPredicate(), value, x, y);
+                }
+                else
+                {
+                    state.Undefine(Predicate.GetCurrentPredicate(), x, y);
+                }
+            }
+        }
+    }
+}
+```
+
 ### Numerical Fluents
 
 Similarly, numerical fluents can be defined by replacing `bool` with a numerical type, e.g., `float`.
