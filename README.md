@@ -17,8 +17,8 @@ public class Widget(Table table) : Object(), MultipleInheritance()
 {
     public void Invariant(State state)
     {
-        Object.Invariant(state);
-        MultipleInheritance.Invariant(state);
+        Object().Invariant(state);
+        MultipleInheritance().Invariant(state);
 
         System.Diagnostics.Debug.Assert(state.Atop[this, table]);
     }
