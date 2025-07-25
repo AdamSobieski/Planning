@@ -4,11 +4,11 @@ New techniques for modeling planning domains and problems can be explored such t
 
 Advantages of representing planning domains and problems in .NET assemblies or Java JARs include that multiple new languages could be compiled to these formats while PDDL would be one key language to be decompiled from these.
 
-How should planning domain and problem definitions be represented in .NET assemblies and Java JARs?
+How should planning domain and problem definitions be represented in .NET assemblies and/or Java JARs?
 
 ### Types
 
-A key ingredient of modeled planning domains are types. We can consider that types would have [_invariants_](https://en.wikipedia.org/wiki/Invariant_(mathematics)#Invariants_in_computer_science).
+A key ingredient of modeled planning domains are types.Types could have [_invariants_](https://en.wikipedia.org/wiki/Invariant_(mathematics)#Invariants_in_computer_science).
 
 ```
 public class Widget(Table t) extends Object()
