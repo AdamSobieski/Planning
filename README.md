@@ -10,7 +10,7 @@ How should planning domain and problem definitions be represented in .NET assemb
 
 ### Types
 
-A key ingredient of modeled planning domains are types. Types could have [_invariants_](https://en.wikipedia.org/wiki/Invariant_(mathematics)#Invariants_in_computer_science).
+A key ingredient of modeled planning domains are types. Types could define [_invariants_](https://en.wikipedia.org/wiki/Invariant_(mathematics)#Invariants_in_computer_science).
 
 ```
 public class Widget(Table table) : Object(), MultipleInheritance()
@@ -27,7 +27,7 @@ public class Widget(Table table) : Object(), MultipleInheritance()
 
 ### Predicates
 
-Another key ingredient of planning domains are predicates. Considering a C#-styled language, one might consider allowing modelers to define predicates using syntax resembling:
+Another key ingredient of planning domains are predicates. Considering a C#-styled language, one might allow modelers to define predicates using syntax resembling:
 
 ```
 public predicate bool P1[Agent x, Widget y];
@@ -64,10 +64,13 @@ public static class Extension
 
 ### Numerical Fluents
 
-Similarly, numerical fluents can be defined by replacing `bool` with a numerical type, e.g., `float`.
+Similarly, numerical fluents can be defined by replacing `bool` with a numerical type, e.g., `int` or `float`.
 
 ```
-public predicate float P3[Agent x, Widget y];
+public predicate int P3[Agent x, Widget y];
+```
+```
+public predicate float P4[Agent x, Widget y];
 ```
 
 ### Object Fluents
@@ -75,10 +78,10 @@ public predicate float P3[Agent x, Widget y];
 Similarly, object fluents can be defined by replacing `bool` with an object type.
 
 ```
-public predicate object P4[Agent x, Widget y];
+public predicate object P5[Agent x, Widget y];
 ```
 ```
-public predicate Gizmo P5[Agent x, Widget y];
+public predicate Gizmo P6[Agent x, Widget y];
 ```
 
 ### Actions
