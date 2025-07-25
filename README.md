@@ -8,7 +8,7 @@ Of these many new languages which could be compiled to a .NET assembly or Java J
 
 ### Types
 
-A key ingredient of modeled planning domains are types. While, in C#, types can have methods, fields, and properties, for modeling planning domains in a C#-inspired syntax, we might consider that types would have [_invariants_](https://en.wikipedia.org/wiki/Invariant_(mathematics)#Invariants_in_computer_science).
+A key ingredient of modeled planning domains are types. We can consider that types would have [_invariants_](https://en.wikipedia.org/wiki/Invariant_(mathematics)#Invariants_in_computer_science).
 
 ```
 public class Widget(Table t) extends Object()
