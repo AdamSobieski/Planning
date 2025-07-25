@@ -48,7 +48,7 @@ public predicate bool P2[this State state, Agent x, Widget y]
 
 ### Actions
 
-Another key ingredient of planning domains is actions. Actions have preconditions and effects.
+Another key ingredient of planning domains is actions. Actions can have preconditions and effects.
 
 ```
 public action A(Agent x, Widget y) extends B(x, y)
