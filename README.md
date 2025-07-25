@@ -29,7 +29,7 @@ public predicate bool P1[Agent x, Widget y];
 Exploring how predicates might be represented in .NET assemblies or Java JARs, one might base a syntax on the concept of C# 14's [_extension members_](https://devblogs.microsoft.com/dotnet/csharp-exploring-extension-members/). While the eventual syntax may vary, the concept here is that predicates can be considered as being extension properties on a system-provided `State` type.
 
 ```
-public predicate bool P2[this State state, Agent x, Widget y]
+public predicate bool? P2[this State state, Agent x, Widget y]
 {
     get
     {
@@ -37,11 +37,14 @@ public predicate bool P2[this State state, Agent x, Widget y]
     }
     set
     {
-        state.Set<bool>(Predicate.GetCurrentPredicate(), value, x, y);
-    }
-    undefine
-    {
-        state.Undefine(Predicate.GetCurrentPredicate(), x, y);
+        if(value != null)
+        {
+           state.Set<bool>(Predicate.GetCurrentPredicate(), value, x, y);
+        }
+        else
+        {
+            state.Undefine(Predicate.GetCurrentPredicate(), x, y);
+        }
     }
 }
 ```
