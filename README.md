@@ -31,29 +31,7 @@ How might predicates be represented in .NET assemblies or Java JARs? With respec
 While the eventual syntax may vary, the concept here is that predicates can be considered as being extension properties on a system-provided `State` type.
 
 ```
-public predicate bool? P2[this State state, Agent x, Widget y]
-{
-    get
-    {
-        return state.Get<bool>(Predicate.GetCurrentPredicate(), x, y);
-    }
-    set
-    {
-        if(value != null)
-        {
-            state.Set<bool>(Predicate.GetCurrentPredicate(), value, x, y);
-        }
-        else
-        {
-            state.Undefine(Predicate.GetCurrentPredicate(), x, y);
-        }
-    }
-}
-```
-
-This might also resemble something like:
-```
-public static class PredicateExtensions
+public static class Extension
 {
     extension(State state)
     {
@@ -65,9 +43,9 @@ public static class PredicateExtensions
             }
             set
             {
-                if(value != null)
+                if(value.HasValue)
                 {
-                    state.Set<bool>(Predicate.GetCurrentPredicate(), value, x, y);
+                    state.Set<bool>(Predicate.GetCurrentPredicate(), value.Value, x, y);
                 }
                 else
                 {
