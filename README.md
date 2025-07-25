@@ -110,6 +110,18 @@ public action A(Agent x, Widget y) : B(x, y), C(x, y)
 }
 ```
 
+### Compositions
+
+One could create compositions of factual declarations to [reuse](https://en.wikipedia.org/wiki/Code_reuse) throughout planning domain and problem definitions, reducing [code duplication](https://en.wikipedia.org/wiki/Duplicate_code) per the [DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself) principle.
+
+```
+public composition R(State state, Agent a1, Agent a2, Widget w1, Widget w2)
+{
+    state.P1[a1, w1] = true;
+    state.P2[a2, w2] = true;
+}
+```
+
 ## Modeling Problem Definitions
 
 Coming soon.
