@@ -4,9 +4,23 @@ New techniques for modeling planning domains and problems could be explored such
 
 Advantages of representing planning domains and problems in assemblies or JARs include that multiple languages could be compiled to these while PDDL would be one key language to be decompiled from these.
 
-## Predicates
+### Types
 
-One key ingredient of planning domains is predicates. Considering a C#-styled language, one might consider allowing modelers to define predicates using syntax resembling:
+One key ingredient of modeled planning domains is types. While in C#, types have methods and properties, for planning domains, we might consider that a type can have an [_invariant_](https://en.wikipedia.org/wiki/Invariant_(mathematics)#Invariants_in_computer_science).
+
+```
+public class Widget(Table t) extends Object()
+{
+    invariant(State state)
+    {
+        // ...
+    }
+}
+```
+
+### Predicates
+
+Another key ingredient of planning domains is predicates. Considering a C#-styled language, one might consider allowing modelers to define predicates using syntax resembling:
 
 ```
 public predicate bool P1(Agent x, Widget y);
@@ -31,3 +45,4 @@ public predicate bool P2(this State state, Agent x, Widget y)
     }
 }
 ```
+
