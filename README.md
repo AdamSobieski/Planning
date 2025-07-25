@@ -122,6 +122,34 @@ public composition R(State state, Agent a1, Agent a2, Widget w1, Widget w2)
 }
 ```
 
+In .NET assemblies, compositions, special types of functions, might resemble having been compiled from something resembling:
+
+```
+[CompilerGenerated]
+[Composition]
+public static void R(this State state, Agent a1, Agent a2, Widget w1, Widget w2)
+{
+    state.P1[a1, w1] = true;
+    state.P2[a2, w2] = true;
+}
+```
+or
+```
+public static class Compositions
+{
+    extension(State state)
+    {
+        [CompilerGenerated]
+        [Composition]
+        public void R(Agent a1, Agent a2, Widget w1, Widget w2)
+        {
+            state.P1[a1, w1] = true;
+            state.P2[a2, w2] = true;
+        }
+    }
+}
+```
+
 ## Modeling Problem Definitions
 
 Coming soon.
