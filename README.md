@@ -70,19 +70,13 @@ public action A(this State state, Agent x, Widget y) extends B(state, x, y)
 {
     preconditions
     {
-        P1[x, y];
+        System.Diagnostics.Debug.Assert(state.P1[x, y]);
     }
 
     effects
     {
-        remove
-        {
-            P1[x, y];
-        }
-        add
-        {
-            P2[x, y];
-        }
+        state.P1[x, y] = null;
+        state.P2[x, y] = true;
     }
 }
 ```
