@@ -13,7 +13,7 @@ public class Widget(Table t) extends Object()
 {
     invariant(State state)
     {
-        // ...
+        System.Diagnostics.Debug.Assert(state.Atop[this, t]);
     }
 }
 ```
