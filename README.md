@@ -28,7 +28,7 @@ Another key ingredient of planning domains are predicates. Considering a C#-styl
 public predicate bool P1[Agent x, Widget y];
 ```
 
-The concept here, regardless of syntax, is that predicates can be considered as being extension members of a provided `State` type.
+A concept here, regardless of syntax, is that predicates can be considered as being extension members of a provided `State` type.
 
 ```
 public static class Extension
@@ -67,7 +67,7 @@ public predicate float P3[Agent x, Widget y];
 
 ### Actions
 
-Another key ingredient of planning domains are actions. Actions can have preconditions and effects.
+Another key ingredient of planning domains are actions. Actions have preconditions and effects.
 
 ```
 public action A(this State state, Agent x, Widget y) extends B(state, x, y)
