@@ -127,6 +127,7 @@ In .NET assemblies, compositions, special types of functions, might resemble hav
 ```
 [CompilerGenerated]
 [Composition]
+[MethodImpl(MethodImplOptions.AggressiveInlining)]
 public static void R(this State state, Agent a1, Agent a2, Widget w1, Widget w2)
 {
     state.P1[a1, w1] = true;
@@ -141,6 +142,7 @@ public static class Compositions
     {
         [CompilerGenerated]
         [Composition]
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public void R(Agent a1, Agent a2, Widget w1, Widget w2)
         {
             state.P1[a1, w1] = true;
