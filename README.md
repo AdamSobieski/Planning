@@ -61,7 +61,7 @@ Another key ingredient of planning domains are actions. Actions can have precond
 A preliminary concept for representing an action in a .NET assembly or Java JAR resembles:
 
 ```
-public action A(this State state, Agent x, Widget y) extends B(x, y)
+public action A(this State state, Agent x, Widget y) extends B(state, x, y)
 {
     preconditions
     {
