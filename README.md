@@ -20,7 +20,7 @@ public class Widget(Table table) : Object(), MultipleInheritance()
         Object().Invariant(state);
         MultipleInheritance().Invariant(state);
 
-        System.Diagnostics.Debug.Assert(state.Atop[this, table] == true);
+        Debug.Assert(state.Atop[this, table] == true);
     }
 }
 ```
@@ -96,7 +96,7 @@ public action A(Agent x, Widget y) : B(x, y), C(x, y)
         B(x, y).Preconditions(state);
         C(x, y).Preconditions(state);
 
-        System.Diagnostics.Debug.Assert(state.P1[x, y] == true);
+        Debug.Assert(state.P1[x, y] == true);
     }
 
     public void Effects(State state)
