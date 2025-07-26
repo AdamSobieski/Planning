@@ -88,6 +88,8 @@ public predicate Gizmo P6[Agent x, Widget y];
 
 Another key ingredient of planning domains are actions. Actions have preconditions and effects.
 
+In [hierarchical task networks](https://en.wikipedia.org/wiki/Hierarchical_task_network), a primitive task is an action that can be executed directly given the state in which it is executed supports its preconditions and a compound task is a complex task composed of a partially ordered set of further tasks, which can either be primitive or abstract.
+
 ```
 public action A(Agent x, Widget y) : B(x, y), C(x, y)
 {
