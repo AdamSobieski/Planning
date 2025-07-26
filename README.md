@@ -27,7 +27,7 @@ public class Widget(Table table) : Object(), MultipleInheritance()
 
 ### Predicates
 
-Another key ingredient of planning domains are predicates. Considering a C#-styled language, one might allow modelers to define predicates using syntax resembling:
+Another key ingredient of planning domains are predicates. Considering a C#-styled language, one could allow modelers to define predicates using syntax resembling:
 
 ```
 public predicate bool P1[Agent x, Widget y];
